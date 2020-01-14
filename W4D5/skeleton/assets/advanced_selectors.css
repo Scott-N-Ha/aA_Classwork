@@ -54,10 +54,25 @@ form input[type="submit"]:last-child {
   box-shadow: goldenrod;
 }
 
-ol li:nth-child(odd) {
+/* ol li:nth-child(odd) {
   background-color: gray;
+} */
+
+/* h2+.user_review {
+  border-width: 1px;
+} */
+
+/* #test p {
+  font-size: 18px;
+  background-color: red;
 }
 
-h2+.user_review {
+ol li:last-child {
+  color: green;
+} */
+
+h1+figure {
+  border: black;
+  border-style: solid;
   border-width: 1px;
 }
