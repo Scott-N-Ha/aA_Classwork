@@ -1,6 +1,6 @@
 class Response < ApplicationRecord
   validates :user_id, :choice_id, presence: true
-  validate :not_duplicate_response
+  # validate :not_duplicate_response
 
   belongs_to :respondent,
     foreign_key: :user_id,
@@ -19,12 +19,8 @@ class Response < ApplicationRecord
   # end
 
   def sibling_responses
-    # question = self.question
-    # arr_responses = question.responses
-
-    Response
-      .includes(:question)
-      .where("responses.id != ?", @id)  #.not(id: @id)
+    question = self.question
+    arr_responses = question.responses.
   end
 
 end
