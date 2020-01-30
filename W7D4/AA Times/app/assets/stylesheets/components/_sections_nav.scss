@@ -1,0 +1,23 @@
+.section-nav {
+    border-bottom: 1px solid lightgray;
+    // margin-top: 5px;
+    // margin-bottom: 100px;
+    padding: 10px;
+}
+
+.section-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.section-nav ul li {
+    margin: 7px;
+}
+
+.section-nav ul li:hover {
+    background-color: lightgray;
+}
+
+.section-nav ul li:last-child {
+    border-bottom: 1px solid black;
+}

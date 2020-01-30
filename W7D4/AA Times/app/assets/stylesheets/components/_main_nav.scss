@@ -1,0 +1,46 @@
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.left-nav > ul,
+.right-nav > ul {
+    display: flex;
+    align-items: stretch;
+}
+
+.left-nav > ul > li {
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+
+.right-nav > ul > li {
+    font-family: inherit;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+
+.right-nav > ul > li:last-of-type {
+
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+    color: silver;
+}
+
+.left-nav span {
+    margin: 10px;
+}
+
+.right-nav ul li {
+    margin: 0px 10px 0px 10px;
+}
+
+.right-nav i {
+    font-size: 18px;
+}
