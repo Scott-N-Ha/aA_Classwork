@@ -1,0 +1,26 @@
+<h3><a href="<%= sub_url(@post.sub) %>"><%= @post.sub.title %></a></h3>
+<h4>Edit <%= @post.title %></h4>
+<form action="<%= sub_post_url(sub_id: params[:sub_id], id: params[:id]) %>" method="POST">
+  <input type="hidden" name="_method" value="PATCH">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label>Title:
+    <input type="text" name="post[title]" value="<%= @post.title %>">
+  </label>
+  <br>
+  <img src="<%= @post.url %>">
+  <label>URL:
+    <br>
+    <input type="url" name="post[url]" value="<%= @post.url %>">
+  </label>
+  <br>
+  <label>Content:
+    <textarea name="post[content]" cols="30" rows="10">
+      <%= @post.content %>
+    </textarea>
+  </label>
+  <br>
+  <button>Edit</button>
+
+</form>
+
+

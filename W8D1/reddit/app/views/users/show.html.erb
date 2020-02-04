@@ -1,0 +1,15 @@
+<p><% @user.username %></p>
+
+<% if logged_in? && current_user.id == @user.id %>
+<a href="<%= edit_user_url(@user) %>">Edit User</a>
+<% end %>
+
+<%= @user.username %>'s Comments
+<ul>
+  <% @user.comments.each do |comment| %>
+    <a href="<%= sub_post_url(sub_id: comment.post.sub_id, id: comment.post_id) %>"><%= comment.post.title %></a>
+    <br>
+    <%= comment.content %>
+    <br>
+  <% end %>
+</ul>

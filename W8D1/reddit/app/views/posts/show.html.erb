@@ -1,0 +1,29 @@
+<h3><a href="<%= sub_url(@post.sub) %>"><%= @post.sub.title %></a></h3>
+<h1><%= @post.title %></h1>
+
+<p>Author: <a href="<%= user_url(@post.author.id) %>"><%= @post.author.username %></a></p>
+<img src="<%= @post.url %>" alt="<%= @post.title %>">
+<p>Content:<%= @post.content %></p>
+
+<h2>Comments</h2>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+    Author: <a href="<%= user_url(comment.author.id) %>"><%= comment.author.username %></a>
+    <br>
+    <%= comment.content %>
+    <br>
+    Commented: <%= comment.created_at %>
+    <% if logged_in? && current_user.id == comment.author_id %>
+    <form action="<%= edit_sub_post_comment_url(sub_id: params[:sub_id], post_id: params[:id], id: comment.id) %>" method="get">
+    <button>Edit Comment</button>
+    </form>
+    <% end %> 
+    </li>
+  <% end %>
+</ul>
+
+<form action="<%= sub_post_comments_url(sub_id: @post.sub_id, post_id: @post.id) %>" method="post">
+  <textarea name="comment[content]" cols="30" rows="10"></textarea>
+  <button>Comment</button>
+</form>

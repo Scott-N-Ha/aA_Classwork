@@ -1,0 +1,19 @@
+<h1><%= @sub.title %></h1>
+<form action="<%= new_sub_post_url(sub_id: params[:id]) %>" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button>Submit New Post</button>
+</form>
+<ul>
+  <% @sub.posts.each do |post| %>
+    <li>
+      <img src="<%= post.url %>" class="sub-img">
+      <a href="<%= sub_post_url(sub_id: params[:id], id: post.id) %>"><%= post.title %></a>
+      <% if logged_in? && current_user.id == post.author_id %>
+        <form action="<%= edit_sub_post_url(sub_id: params[:id], id: post.id) %>" method="get"><button>Edit</button></form>
+      <% end %>
+      <%= post.comments.count %> comment(s)
+    </li>
+  <% end %>
+</ul>
+
+<%= button_to "Go to subs", subs_url, method: :get %>
