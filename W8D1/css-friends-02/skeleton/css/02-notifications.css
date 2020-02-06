@@ -1,0 +1,17 @@
+/* PHASE 2: Notifications */
+
+.badge {
+  border-radius: 50%;  
+  position: relative;
+}
+
+.badge:hover > .clit {
+  display: block;
+  position: absolute;
+}
+
+.clit {
+  display: none;
+  
+}
+

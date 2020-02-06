@@ -1,0 +1,13 @@
+/* PHASE 4: Footer */
+
+footer {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+}
+
+
+footer ul {
+  display: flex;
+}
