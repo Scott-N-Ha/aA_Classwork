@@ -1,0 +1,16 @@
+/* PHASE 9: Forms */
+.content-main {
+  display: flex;
+}
+
+.content-main form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  background-color: lightgray;
+  max-height: 300px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  padding: 10px;
+  width: 500px;
+}

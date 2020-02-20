@@ -1,0 +1,28 @@
+/* PHASE 10: Posts */
+
+.posts {
+  display: flex;
+  flex-direction: column;
+}
+
+.posts .form-thumb {
+  min-width: 58px;
+}
+
+.posts li {
+  display: flex;
+}
+
+.post-content {
+  margin-left: 15px;
+}
+
+.post-name {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.post-content p {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.clock{
+  color: antiquewhite;
+  background-color: orange;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+}
+
+.clock-time, .clock-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab{
+  width: 150px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: lightblue;
+  /* padding: 2px; */
+
+}
+
+.tab-header {
+  display: flex;
+  justify-content: space-between;
+}
+.tab-header li {
+  width: 100%;
+  border: 1px solid black;
+}
+.tab-content {
+  height: 200px;
+  color: white;
+}
